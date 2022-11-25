@@ -2,19 +2,19 @@
 const mainPhoto = document.querySelector(".image-holder");
 const slides = [
     {
-        image: './youthrun/img1.JPG'
+        image: '/youthrun/img1.JPG'
     },
     {
-        image: './youthrun/img2.jpg'
+        image: '/youthrun/img2.jpg'
     },
     {
-        image: './youthrun/img3.jpg'
+        image: '/youthrun/img3.jpg'
     },
     {
-        image: './youthrun/img4.jpg'
+        image: '/youthrun/img4.jpg'
     },
     {
-        image: './youthrun/img5.jpg'
+        image: '/youthrun/img5.jpg'
     }
 ];
 
