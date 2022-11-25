@@ -67,7 +67,7 @@ function slideNextImg() {
 
 function slidePrevImg() {
     i--;
-    if (i < slides.length - slides.length) {
+    if (i < 0) {
     i = slides.length - 1;
     } 
     show();
