@@ -1,33 +1,5 @@
-//countdown timer
-/* const countdown = () => {
-    const countDate = new Date('January 05, 2022 00:00:00').getTime();
-    const now = new Date().getTime();
-    const gap = countDate - now;
-
-    const second = 1000;
-    const minute = second * 60;
-    const hour = minute * 60;
-    const day = hour * 24;
-
-    const textDay = Math.floor(gap / day);
-    const textHour = Math.floor((gap % day) / hour);
-    const textMinute = Math.floor((gap % hour) / minute);
-    const textSecond = Math.floor((gap % minute) / second);
-
-    document.querySelector('.dayVal').innerHTML = textDay; 
-    document.querySelector('.hourVal').innerHTML = textHour; 
-    document.querySelector('.minuteVal').innerHTML = textMinute; 
-    document.querySelector('.secondVal').innerHTML = textSecond; 
-}
-setInterval(countdown, 1000);
- */
-
 //slideshow
 const mainPhoto = document.querySelector(".image-holder");
-const slidePrev = document.querySelector('.slide-prev');
-const slideNext = document.querySelector('.slide-next');
-slidePrev.addEventListener('click', slidePrevImg);
-slideNext.addEventListener('click', slideNextImg);
 const slides = [
     {
         image: './youthrun/img1.JPG'
@@ -50,8 +22,8 @@ let i = 1;
 function show()
 {
     var path = document.location.pathname;
-var directory = path.substring(path.indexOf('/'), path.lastIndexOf('/'));
-const str = directory+slides[i].image
+    var directory = path.substring(path.indexOf('/'), path.lastIndexOf('/'));
+    const str = directory+slides[i].image
     mainPhoto.style.background = `url(${str})`;
     mainPhoto.style.backgroundSize = "cover";
     mainPhoto.style.backgroundRepeat = "no-repeat";
@@ -60,21 +32,4 @@ const str = directory+slides[i].image
     i = (i+1)%slides.length
 }
 show();
-
-function slideNextImg() {
-    i++;
-    if (i > slides.length - 1) {
-        i = 0;
-    } 
-    show();
-}
-
-function slidePrevImg() {
-    i--;
-    if (i < 0) {
-    i = slides.length - 1;
-    } 
-    show();
-}
-
 setInterval(show, 4000);
