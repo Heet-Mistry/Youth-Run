@@ -54,6 +54,7 @@ function show()
     mainPhoto.style.backgroundRepeat = "no-repeat";
     mainPhoto.style.borderRadius = '1rem';
     mainPhoto.style.transition = 'ease-in 0.5s';
+    i = (i+1)%slides.length
 }
 show();
 
@@ -73,4 +74,4 @@ function slidePrevImg() {
     show();
 }
 
-setInterval(slideNextImg, 5000);
+setInterval(show, 4000);
